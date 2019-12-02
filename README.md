@@ -1,5 +1,5 @@
 # WebDev
-Social network for developer with MERN stack
+Social network for developer created with MERN stack
 
 ## Quick Start
 ```# change default.json file in config folder```
@@ -9,6 +9,7 @@ Social network for developer with MERN stack
 ```# add uri of your mongodb connection for example```
 
 ``` "mongoURI": "your mongo connection here"```
+### Install dependencies and run on your local machine
 
 Install server dependencies
 ```npm install```
