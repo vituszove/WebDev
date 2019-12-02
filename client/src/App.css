@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: Roboto;
+}
+nav button {
+  display: none;
+}
+nav {
+  border-bottom: teal 2px solid;
+}
+nav > ul {
+  margin: 0;
+}
+.background {
+  position: relative;
+}
+.background .guest-sidenav-img {
+  height: 100px;
+  width: 100%;
+}
+.background .side-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.register-form {
+  margin-top: 4rem !important;
+}
+.login-form {
+  margin-top: 4rem !important;
+}
+.sidenav a {
+  color: #fff !important;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.landing {
+  position: relative;
+  background-image: url("./img/landingbg.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.landing-inner {
+  color: #fff;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  text-align: left;
+}
+.landingbtn {
+  margin-top: 1rem;
+}
+.landingbtn a {
+  margin: 0 0.5rem;
+}
+
+.comment-line {
+  width: 70%;
+  height: 1px;
+
+  margin-bottom: 1rem;
+  background-image: linear-gradient(
+    to right,
+    teal 0%,
+    #43e97b 50%,
+    #57fa8e 90%,
+    #fff 100%
+  );
+}
+.line {
+  width: 80%;
+  height: 1px;
+  margin: 0 2.5%;
+  margin-bottom: 1.5%;
+  background-image: linear-gradient(
+    to right,
+    teal 0%,
+    #43e97b 50%,
+    #57fa8e 90%,
+    #fff 100%
+  );
+}
+.tabcontent {
+  min-height: 300px !important;
+  width: 100%;
+  overflow: auto;
+}
+.profileimage {
+  padding: 1.2rem 0;
+}
+
+.biotitle {
+  margin-left: 2.5%;
+}
+.bio {
+  margin-left: 2.5%;
+}
+.skillset {
+  margin-left: 2.5%;
+  margin-top: 1%;
+}
+.skills {
+  margin-top: 1.5%;
+  margin-right: 5%;
+}
+.working-experience-title {
+  margin-left: 2.5%;
+  font-weight: bold;
+}
+.experience h6 {
+  margin-left: 2.5%;
+  font-weight: 700;
+}
+.desc-title {
+  margin-left: 2.5%;
+  margin-bottom: -1%;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.desc {
+  margin-left: 2.5%;
+  font-size: 0.9rem;
+}
+.date {
+  margin-left: 2.5% !important;
+  font-size: 0.8rem !important;
+  color: grey !important;
+  font-weight: 300;
+}
+
+.comment button {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
+.comment-date {
+  font-size: 0.8rem !important;
+  color: grey !important;
+  font-weight: 300;
+  margin: 0;
+}
+.comment {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  width: 100%;
+  display: inline-block;
+}
+.comment-title {
+  margin: 0;
+  padding: 0;
+}
+.education-title {
+  margin-left: 2.5%;
+  font-weight: bold;
+}
+.education h6 {
+  margin-left: 2.5%;
+  font-weight: 700;
+}
+.degree-fos {
+  margin-left: 2.5%;
+  font-weight: 600;
+}
+.repo ul {
+  margin: 0 2.5%;
+  padding-bottom: 0.5rem;
+}
+.repo-title {
+  padding: 0.4rem 0;
+}
+.repo p {
+  margin: 1.5% 2.5%;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+.github-card {
+  margin: 10px;
+}
+.social-icons {
+  padding: 0.8rem;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+  color: white;
+}
+textarea {
+  min-height: 100px !important;
+}
+.post {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.post-image {
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  float: left;
+  display: inline-block;
+}
+
+.post-content p {
+  margin: 0.5rem;
+
+  width: auto;
+}
+.post-button {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  position: relative;
+}
+.totheright {
+  position: absolute;
+  right: 0;
+}
+.post-name {
+  margin: 0;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  border-bottom: 1px solid teal;
+  font-weight: 700;
+}
+.discussion-btn {
+  margin-right: 1rem;
+  display: inline-block;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-image {
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .post-content p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-button {
+    margin: 0.8rem;
+  }
+
+  .btn-large {
+    width: 100% !important;
+  }
+}
+.bckbtn a {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.comment-post img {
+  border: 4px solid teal;
+}
+.posting-area {
+  padding: 1rem 0;
+}
+.alert-danger {
+  display: block;
+  background-color: #ff7373;
+  color: #fff;
+  text-align: center;
+  width: 100% !important;
+
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  opacity: 0.7;
+}
+.alert-success {
+  display: block;
+  background-color: teal;
+  color: #fff;
+  text-align: center;
+  width: 100% !important;
+
+  padding: 1rem;
+  margin-top: 1rem;
+
+  opacity: 0.7;
+}
+.btn-small {
+  margin: 0.3rem;
+}
+@media screen and (max-width: 992px) {
+  nav button {
+    display: block;
+  }
+  .full-size-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .card {
+    margin-bottom: 2rem !important;
+  }
+}
+.tabs .tab a.active {
+  background-color: #333 !important;
+  color: #64ffda !important;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color: #64ffda !important;
+} /*Color of underline*/
+.card h5 {
+  margin: 0;
+  margin-top: -1rem;
+}
+.profiles-location {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.profiles-bio {
+  font-size: 0.9rem;
+  margin-top: 1rem !important;
+}
+.card-image {
+  padding: 0.8rem !important;
+}
+.new-comment {
+  padding: 0.1rem;
+  margin-left: 0.5rem;
+}
