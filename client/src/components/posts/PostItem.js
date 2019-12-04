@@ -15,10 +15,7 @@ const PostItem = ({
   showActions
 }) => {
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function() {
-      var elems = document.querySelectorAll(".tooltipped");
-      var instances = M.Tooltip.init(elems, { enterDelay: 100 });
-    });
+    M.AutoInit();
   }, []);
   return (
     <div className="post z-depth-1" key={_id}>

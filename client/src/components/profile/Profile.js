@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import ProfileTop from "./ProfileTop";
 import ProfileGithub from "./ProfileGithub";
-import "materialize-css/dist/css/materialize.min.css";
+
 import M from "materialize-css/dist/js/materialize.min.js";
 
 import { getProfileById } from "../../actions/profile";

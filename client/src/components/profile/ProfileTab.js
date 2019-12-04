@@ -4,19 +4,13 @@ import { connect } from "react-redux";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
 import { getProfileById } from "../../actions/profile";
-import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import ProfileEducation from "./ProfileEducation";
 
-const ProfileTab = ({
-  getProfileById,
-  match,
-  profile: { profile, loading },
-  auth
-}) => {
+const ProfileTab = ({ profile: { profile, loading } }) => {
   useEffect(() => {
     M.Tabs.init(document.querySelectorAll(".tabs"), { swipeable: true });
-  }, []);
+  }, [profile, loading]);
   return (
     <div className="container z-depth-1">
       <div className="row">
