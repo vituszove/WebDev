@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://vituszove:vituszove@devconnector-assg0.mongodb.net/test?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://vituszove:fWZSilNYXffu7w6n@devconnector.assg0.mongodb.net/?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
   "githubClientId": "4bb4d9dc90658a59b331",
   "githubSecret": "a794d1bb79f599425e884c8737b2b8029ec39af6"
