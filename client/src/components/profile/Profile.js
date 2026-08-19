@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import ProfileTop from "./ProfileTop";
@@ -10,16 +10,12 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 import { getProfileById } from "../../actions/profile";
 import ProfileTab from "./ProfileTab";
-const Profile = ({
-  getProfileById,
-  match,
-  profile: { profile, loading },
-  auth
-}) => {
+const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
+  const { id } = useParams();
   useEffect(() => {
     M.AutoInit();
-    getProfileById(match.params.id);
-  }, [getProfileById, match.params.id]);
+    getProfileById(id);
+  }, [getProfileById, id]);
   return (
     <Fragment>
       {profile === null || loading ? (

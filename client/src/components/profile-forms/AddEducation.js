@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { addEducation } from "../../actions/profile";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
-const AddEducation = ({ addEducation, history }) => {
+const AddEducation = ({ addEducation }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     M.AutoInit();
   }, []);
@@ -45,7 +46,7 @@ const AddEducation = ({ addEducation, history }) => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          addEducation(formData, history);
+          addEducation(formData, navigate);
         }}
       >
         <div className="input-field">
@@ -140,4 +141,4 @@ AddEducation.propTypes = {
   addEducation: PropTypes.func.isRequired
 };
 
-export default connect(null, { addEducation })(withRouter(AddEducation));
+export default connect(null, { addEducation })(AddEducation);

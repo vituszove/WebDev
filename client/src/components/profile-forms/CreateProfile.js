@@ -1,5 +1,5 @@
 import React, { useState, Fragment, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "materialize-css/dist/css/materialize.min.css";
@@ -7,7 +7,8 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 import { createProfile } from "../../actions/profile";
 
-const CreateProfile = ({ createProfile, history }) => {
+const CreateProfile = ({ createProfile }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     M.AutoInit();
   }, []);
@@ -46,7 +47,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    createProfile(formData, history);
+    createProfile(formData, navigate);
   };
   return (
     <Fragment>
@@ -253,4 +254,4 @@ CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired
 };
 
-export default connect(null, { createProfile })(withRouter(CreateProfile));
+export default connect(null, { createProfile })(CreateProfile);

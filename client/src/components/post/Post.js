@@ -4,15 +4,16 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import PostItem from "../posts/PostItem";
 import { getPost } from "../../actions/post";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import CommentForm from "./CommentForm";
 import CommentItem from "./CommentItem";
 
-const Post = ({ getPost, post: { post, loading }, match }) => {
+const Post = ({ getPost, post: { post, loading } }) => {
+  const { id } = useParams();
   useEffect(() => {
-    getPost(match.params.id);
-  }, [getPost]);
+    getPost(id);
+  }, [getPost, id]);
   return (
     <section className="container">
       {loading || post === null ? (

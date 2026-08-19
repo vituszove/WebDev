@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { addExperience } from "../../actions/profile";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
-const AddExperience = ({ addExperience, history }) => {
+const AddExperience = ({ addExperience }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     M.AutoInit();
   }, []);
@@ -37,7 +38,7 @@ const AddExperience = ({ addExperience, history }) => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          addExperience(formData, history);
+          addExperience(formData, navigate);
         }}
       >
         <div className="input-field">
@@ -134,4 +135,4 @@ AddExperience.propTypes = {
   addExperience: PropTypes.func.isRequired
 };
 
-export default connect(null, { addExperience })(withRouter(AddExperience));
+export default connect(null, { addExperience })(AddExperience);
